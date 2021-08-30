@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Homepage - CWS_Practical</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        table {border-collapse: collapse; }
+
+        table,th,td {border: 1px solid black;}
+        th,td {padding: 0.5em;}
+
+        tbody tr:nth-child(odd) {background-color: lightgray;}
+
+        tbody tr:nth-child(even) {background-color: white;}
+        .text-right {text-align: right;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <h3>Add or update a Employee</h3>
+            <form class="add-employee-form">
+                <div class="form-group">
+                    <label for="employee_id">EmployeeId</label>
+                    <input type="number" class="form-control" id="employee_id" disabled/>
+                </div>
+                <div class="form-group">
+                    <label for="employee_name">Name</label>
+                    <input type="text" class="form-control" id="employee_name" />
+                </div>
+                <div class="form-group">
+                    <label for="employee_salary">Salary</label>
+                    <input type="number" class="form-control" id="employee_salary" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-add">Add</button>
+                <button type="button" class="btn btn-primary btn-update">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <h1>Employee list</h1>
+    <table class="employees">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="card-body">
+            <td class="employee_id">0</td>
+            <td class="employee_name">Employee 0</td>
+            <td class="employee_salary">This is Employee 0</td>
+            <td>
+                <a href="#" class="edit_button">Edit</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
